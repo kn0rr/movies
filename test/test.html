@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+ <!--this is what where want our autocomplete to run-->
+    <div id="target"></div>
+<!--chai is an expectation (or assertion) library-->
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+      //need to initalize chai to access expect funciton
+      const expect=chai.expect;
+    </script>
+    <!--Necessary to access functions of the application -->
+    <script src="../utils.js"></script>
+    <script src="../autocomplete.js"></script>
+    <!--All the tests we want to run-->
+    <script src="autocomplete.test.js"></script>
+    <!--Mocha specific script-->
+    <script class="mocha-exec">
+      mocha.run();
+    </script>
+  </body>
+</html>
