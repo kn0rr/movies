@@ -5,7 +5,7 @@ This project simply compares between two different movies based on different KPI
 It uses the `omdbapi` where you need to get an API-Key.
 You can get a free one [here](http://www.omdbapi.com/apikey.aspx).
 
-You must add the API-Key into `index.js` and replay `<Your API KEY` with the actual key.
+You must add the API-Key into `index.js` and replay `<Your API KEY>` with the actual key.
 
 ````js
     async fetchData (searchTerm) {
